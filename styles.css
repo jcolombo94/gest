@@ -1,0 +1,118 @@
+/* Stile del body */
+body {
+    width: 1920px; /* Larghezza fissa */
+    height: 1080px; /* Altezza fissa */
+    overflow: hidden; /* Nasconde lo scroll sulle dimensioni */
+    margin: 0; /* Rimuove i margini predefiniti */
+}
+
+/* Stile del container */
+.container {
+    height: calc(100vh - 50px); /* Altezza del container: altezza totale della finestra meno l'altezza del box verde */
+    padding: 0; /* Rimuove il padding predefinito */
+    position: relative; /* Aggiunto posizionamento relativo */
+}
+
+/* Stile del box rosso */
+.resizable-box {
+    width: 200px; /* larghezza iniziale del box */
+    min-width: 100px; /* larghezza minima del box */
+    height: 100vh; /* Altezza fissa */
+    background-color: #d72828; /* colore di sfondo del box */
+    position: fixed; /* posizionamento fisso per coprire l'intera altezza della pagina */
+    top: 0; /* distanza dal top della pagina */
+    left: 0; /* distanza dalla sinistra della pagina */
+    border: 2px solid #ccc; /* bordo del box */
+    display: flex; /* usiamo flex per gestire la larghezza dell'intestazione */
+    overflow: hidden; /* Nasconde lo scroll all'interno del box */
+    box-sizing: border-box; /* include anche i bordi e il padding nella larghezza */
+    position: relative; /* rendiamo relativo il posizionamento per posizionare l'handler */
+    z-index: 1; /* Posizionamento davanti al box verde */
+}
+
+/* Stile del box verde */
+.green-box {
+    position: fixed; /* posizionamento fisso per coprire l'intera altezza della pagina */
+    top: 0; /* distanza dal top della pagina */
+    left: 180px; /* distanza dalla sinistra della pagina */
+    width: calc(100% - 180px); /* Larghezza del box verde */
+    height: 50px; /* Altezza del box verde */
+    background-color: green; /* Colore di sfondo del box verde */
+    z-index: 0; /* Posizionamento dietro il box rosso */
+}
+
+
+/* Stile del testo all'interno del resizable-box */
+/* Stile del testo all'interno del resizable-box */
+.resizable-box .box-text-tit,
+.resizable-box .box-text {
+    color: white; /* Colore del testo */
+    font-size: 1em; /* Dimensione del carattere relativa al box */
+    white-space: nowrap; /* Evita che il testo vada a capo */
+    overflow: hidden; /* Nasconde il testo che supera il contenitore */
+    text-overflow: ellipsis; /* Aggiunge ellissi al testo che supera il contenitore */
+    max-width: calc(100% - 100px); /* Larghezza massima del testo per adattarsi al box */
+    margin-left: 20px; /* Margine sinistro per spaziare dal bordo */
+    margin-right: 20px; /* Margine destro per spaziare dal bordo */
+    position: absolute; /* Posizionamento assoluto rispetto al resizable-box */
+    top: 10px; /* Distanza dal bordo superiore del resizable-box */
+    left: 10px; /* Distanza dal bordo sinistro del resizable-box */
+}
+
+/* Stile delle immagini all'interno del resizable-box */
+.resizable-box img {
+    width: 30px; /* Larghezza fissa per le immagini */
+    height: 30px; /* Altezza fissa per le immagini */
+    object-fit: cover; /* Ridimensionamento dell'immagine mantenendo le proporzioni e coprendo l'area disponibile */
+}
+
+.box-image1 {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
+
+.resizable-box .box-text {
+    position: absolute;
+    left: 30px; /* Aggiungi il margine destro di 20px */
+    margin-top: 50px; /* Sposta ulteriormente l'elemento di 50px verticalmente */
+}
+
+.resizable-box img {
+    cursor: pointer; /* Cambia il cursore in una mano */
+}
+
+.green-box img {
+    cursor: pointer; /* Cambia il cursore in una mano */
+}
+
+.box-pagina {
+    position: absolute;
+    top: 52px;
+    left: 201px;
+    width: 1330px;
+    height: 620px;
+    background-color: rgb(97, 243, 158);
+    z-index: 0;
+    overflow: scroll; /* Nasconde lo scroll all'interno del box */
+}
+
+
+.box-pagina-content {
+    width: 100%;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 8px; /* Aggiungi spaziatura interna alle celle */
+    text-align: center; /* Centra il testo nelle celle */
+}
+
+
+
